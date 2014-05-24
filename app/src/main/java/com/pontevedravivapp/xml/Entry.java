@@ -1,6 +1,8 @@
 package com.pontevedravivapp.xml;
 
-public class Entry {
+import java.io.Serializable;
+
+public class Entry implements Serializable {
     private String title;
     private String text;
     private String author;
