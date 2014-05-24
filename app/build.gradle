@@ -1,0 +1,26 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.3"
+
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+
+    compile 'com.android.support:support-v4:+'
+    compile 'com.loopj.android:android-async-http:1.4.4+'
+    compile 'com.github.johnkil.android-robototextview:robototextview:2.0.1'
+    compile fileTree(dir: 'lib', includes: ['*.jar'])
+}

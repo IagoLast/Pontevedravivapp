@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="url_base">http://pontevedraviva.com</string>
+    <string name="url_news">/rss</string>
+    <string name="url_sports">/rss-deportes/?lang=es</string>
+    <string name="url_culture">/rss-cultura/?lang=es</string>
+    <string name="url_opinion">/rss-opinions/?lang=es</string>
+    <string name="app_name">Pontevedra Viva</string>
+    <string name="title_activity_news">Leer noticia</string>
+    <string name="reload">Actualizar noticias.</string>
+    <string name="image_description">Imagen de la noticia.</string>
+    <string name="loading">Cargando</string>
+    <string name="news">Noticias</string>
+    <string name="sports">Deportes</string>
+    <string name="culture">Cultura</string>
+    <string name="opinion">Opinion</string>
+    <string name="error_downloading_news">Error descargando las noticias.</string>
+    <string name="error_processing_news">Error procesando las noticias.</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

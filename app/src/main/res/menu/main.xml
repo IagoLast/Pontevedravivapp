@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_reload"
+        android:icon="@drawable/ic_reload"
+        android:showAsAction="ifRoom"
+        android:title="@string/reload"/>
+    <item
+        android:id="@+id/action_news"
+        android:icon="@drawable/ic_action_news"
+        android:showAsAction="collapseActionView"
+        android:title="@string/news"/>
+    <item
+        android:id="@+id/action_sports"
+        android:icon="@drawable/ic_action_sports"
+        android:showAsAction="collapseActionView"
+        android:title="@string/sports"/>
+    <item
+        android:id="@+id/action_culture"
+        android:icon="@drawable/ic_action_culture"
+        android:showAsAction="collapseActionView"
+        android:title="@string/culture"/>
+    <item
+        android:id="@+id/action_opinion"
+        android:icon="@drawable/ic_action_culture"
+        android:showAsAction="collapseActionView"
+        android:title="@string/opinion"/>
+
+</menu>
