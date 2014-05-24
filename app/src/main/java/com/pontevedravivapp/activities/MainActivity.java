@@ -42,7 +42,14 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loadUI();
-        downloadData(getString(R.string.url_news));
+        if (savedInstanceState != null) {
+            Log.i("Main", "loadedFromCache");
+            currentUrl = savedInstanceState.getString("currentUrl");
+            entries = (List<Entry>) savedInstanceState.getSerializable("entries");
+            populateListView(entries);
+        } else {
+            downloadData(getString(R.string.url_news));
+        }
     }
 
     private void loadUI() {
@@ -65,6 +72,13 @@ public class MainActivity extends Activity {
         animationDrawable.stop();
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle bundle) {
+        bundle.putString("currentUrl", currentUrl);
+        bundle.putSerializable("entries", (java.io.Serializable) entries);
+        super.onSaveInstanceState(bundle);
+    }
+
     private void downloadData(String url) {
         currentUrl = url;
         showLoading(true);
@@ -74,7 +88,6 @@ public class MainActivity extends Activity {
 
     private void populateListView(List<Entry> items) {
         entries = items;
-        Log.i("MAIN", "populate: " + String.valueOf(items.size()));
         NewsAdapter newsAdapter = new NewsAdapter(this, items);
         listView.setAdapter(newsAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -88,6 +101,7 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+        showLoading(false);
     }
 
 
@@ -152,8 +166,8 @@ public class MainActivity extends Activity {
                 populateListView(PontevedraVivaXmlParser.parse(new ByteArrayInputStream(responseBody)));
             } catch (Exception e) {
                 actionBar.setTitle(R.string.error_processing_news);
+                showLoading(false);
             }
-            showLoading(false);
         }
 
         @Override
@@ -161,6 +175,7 @@ public class MainActivity extends Activity {
             super.onFailure(statusCode, headers, responseBody, error);
             actionBar.setTitle(R.string.error_downloading_news);
             error.printStackTrace();
+            showLoading(false);
         }
 
     }
