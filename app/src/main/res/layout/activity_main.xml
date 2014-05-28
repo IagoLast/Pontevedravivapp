@@ -2,8 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pontevedra_viva_blue"
-    android:gravity="top"
     tools:context=".MainActivity" >
 
     <ListView
@@ -24,7 +22,8 @@
         android:layout_height="114dp"
         android:layout_centerInParent="true"
         android:background="@drawable/progress_animation"
-        android:indeterminate="true" android:contentDescription="@string/loading">
+        android:indeterminate="true"
+        android:contentDescription="@string/loading">
 
     </ImageView>
 

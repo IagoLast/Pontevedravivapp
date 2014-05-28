@@ -6,14 +6,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.Html;
-import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.BinaryHttpResponseHandler;
 import com.pontevedravivapp.R;
-import com.pontevedravivapp.net.NewsNetClient;
 
 import org.apache.http.Header;
 

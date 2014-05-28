@@ -15,10 +15,10 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.loopj.android.http.AsyncHttpResponseHandler;
-import com.pontevedravivapp.xml.Entry;
 import com.pontevedravivapp.NewsAdapter;
 import com.pontevedravivapp.R;
 import com.pontevedravivapp.net.NewsNetClient;
+import com.pontevedravivapp.xml.Entry;
 import com.pontevedravivapp.xml.PontevedraVivaXmlParser;
 
 import org.apache.http.Header;
